@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #F3F7F8;
+        }
+        .navbar {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ADD8E6;
+        }
+        .navbar-brand, .nav-link {
+            color: #000 !important;
+        }
+        .nav-link:hover {
+            color: #F1BC0B !important;
+        }
+        .nav-link.btn {
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #ADD8E6;
+            color: #000;
+        }
+        .footer a {
+            color: #000;
+        }
+        .alert-warning {
+            background-color: #ADD8E6;
+            color: #000;
+            border: 1px solid #000;
+        }
+        .btn-primary {
+            background-color: #ADD8E6;
+            border: none;
+            color: #000;
+        }
+        .btn-primary:hover {
+            background-color: #F1BC0B;
+        }
+        .modal-content {
+            background-color: #fff;
+            color: #000;
+        }
+        .modal-content.dark {
+            background-color: #343131;
+            color: #fff;
+        }
+        /* Styles for black theme */
+        body.black-theme {
+            background-color: #343131;
+            color: #fff;
+        }
+        body.black-theme .navbar,
+        body.black-theme .footer,
+        body.black-theme .btn-primary,
+        body.black-theme .alert-warning {
+            background-color: #F1BC0B;
+            color: #000;
+        }
+        body.black-theme .nav-link:hover {
+            color: #ccc !important; /* Lighter shade of gray for hover effect */
+        }
+        body.black-theme .table th,
+        body.black-theme .table td,
+        body.black-theme pre code {
+            color: #fff; /* White font color for table and code in black theme */
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand mx-auto" href="#">Scam Detection Application</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="home"><i class="fas fa-home"></i> Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="about"><i class="fas fa-users"></i> About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="settingsLink"><i class="fas fa-cog"></i> Settings</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Project Overview -->
+<section id="overview" style="margin-top: 30px;">
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>The Scam Detection System is a machine learning-based application designed to identify spam or scam messages accurately. It utilizes natural language processing techniques and various classification algorithms to distinguish between genuine and fraudulent messages.</p>
+    </div>
+</section>
+
+<!-- Preprocessing Steps -->
+<section id="preprocessing">
+    <div class="container">
+        <h2>Preprocessing Steps</h2>
+        <p>Before training the machine learning models, the dataset undergoes several preprocessing steps to enhance the quality of the input data:</p>
+        <ul>
+            <li>Conversion of text to lowercase</li>
+            <li>Removal of special characters and digits</li>
+            <li>Elimination of links</li>
+            <li>Tokenization of text</li>
+            <li>Exclusion of stopwords</li>
+            <li>Stemming of words</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Models Training -->
+<section id="models-training">
+  <div class="container">
+      <h2>Models Training</h2>
+      <p>The Scam Detection System employs three machine learning models:</p>
+      <ul>
+          <li>Random Forest Classifier</li>
+          <li>Logistic Regression Classifier</li>
+          <li>Support Vector Machine (SVM)</li>
+      </ul>
+      <p>Each model is trained on preprocessed data using TF-IDF vectorization to extract features and make predictions. Furthermore, the models are combined using ensemble learning techniques to improve the overall performance:</p>
+      <ul>
+          <li>Hard Voting: This method combines the predictions of each model by taking the majority vote.</li>
+          <li>Soft Voting: This method combines the predictions by averaging the probabilities from each model and selecting the class with the highest average probability.</li>
+      </ul>
+  </div>
+  <div class="container">
+<!-- Performance Metrics Table -->
+<h3>Performance Metrics</h3>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Accuracy</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Random Forest</td>
+                <td>0.97</td>
+                <td>0.97</td>
+                <td>0.97</td>
+                <td>0.97</td>
+            </tr>
+            <tr>
+                <td>Logistic Regression</td>
+                <td>0.96</td>
+                <td>0.96</td>
+                <td>0.96</td>
+                <td>0.96</td>
+            </tr>
+            <tr>
+                <td>SVM</td>
+                <td>0.96</td>
+                <td>0.96</td>
+                <td>0.96</td>
+                <td>0.96</td>
+            </tr>
+            <tr>
+                <td>Hard Voting Ensemble</td>
+                <td>0.96</td>
+                <td>0.96</td>
+                <td>0.96</td>
+                <td>0.96</td>
+            </tr>
+            <tr>
+                <td>Soft Voting Ensemble</td>
+                <td>0.97</td>
+                <td>0.97</td>
+                <td>0.97</td>
+                <td>0.97</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  </div>
+</section>
+
+
+<!-- Model Selection -->
+<section id="model-selection">
+  <div class="container">
+      <h2>Model Selection</h2>
+      <p>Each model was evaluated using Stratified K-fold cross-validation (CV) to determine their performance:</p>
+      <ul>
+          <li><strong>Logistic Regression CV Scores:</strong> [0.96430108, 0.95655914, 0.96473118, 0.96215054, 0.95913978]</li>
+          <li><strong>Mean CV Accuracy:</strong> 0.9613763440860215</li>
+          <li><strong>Standard Deviation of CV Accuracy:</strong> 0.0031182054125405514</li>
+      </ul>
+      <ul>
+          <li><strong>SVM CV Scores:</strong> [0.96645161, 0.96258065, 0.97032258, 0.96817204, 0.9711828]</li>
+          <li><strong>Mean CV Accuracy:</strong> 0.967741935483871</li>
+          <li><strong>Standard Deviation of CV Accuracy:</strong> 0.0030655534935407464</li>
+      </ul>
+      <ul>
+          <li><strong>Random Forest CV Scores:</strong> [0.97376344, 0.9711828, 0.97806452, 0.97978495, 0.98064516]</li>
+          <li><strong>Mean CV Accuracy:</strong> 0.9766881720430106</li>
+          <li><strong>Standard Deviation of CV Accuracy:</strong> 0.003633326809796602</li>
+      </ul>
+      <p>Based on the individual model performances, ensemble techniques were also evaluated:</p>
+      <ul>
+          <li><strong>Hard Voting Classifier CV Scores:</strong> [0.96989247, 0.96473118, 0.97204301, 0.96860215, 0.9716129]</li>
+          <li><strong>Mean CV Accuracy:</strong> 0.9693763440860215</li>
+          <li><strong>Standard Deviation of CV Accuracy:</strong> 0.0026289388025696483</li>
+      </ul>
+      <ul>
+          <li><strong>Soft Voting Classifier CV Scores:</strong> [0.97204301, 0.96602151, 0.97634409, 0.97376344, 0.97204301]</li>
+          <li><strong>Mean CV Accuracy:</strong> 0.9720430107526881</li>
+          <li><strong>Standard Deviation of CV Accuracy:</strong> 0.003397577231506474</li>
+      </ul>
+      <p>Given these results, the soft voting ensemble was selected for its slightly higher accuracy and balanced performance across metrics.</p>
+  </div>
+</section>
+
+<!-- Detection System -->
+<section id="detection-system">
+  <div class="container">
+      <h2>Detection System</h2>
+      <p>The detection system is the core component of the Scam Detection System. It utilizes the trained machine learning models to analyze input text and determine whether it is genuine or fraudulent.</p>
+      <p>The function <code>predict_fake_or_real()</code> cleans the input text, transforms it using TF-IDF vectorization, and predicts the authenticity of the message based on the trained soft voting classifier.</p>
+  </div>
+</section>
+
+<!-- Integration into Website -->
+<section id="integration">
+  <div class="container">
+      <h2>Integration into Website</h2>
+      <p>The Scam Detection System can be seamlessly integrated into a website to provide real-time scam detection services. Website visitors can input text messages, and the system will promptly classify them as genuine or fraudulent.</p>
+      <p>Example usage:</p>
+      <pre>
+<code>
+input_text = "Congratulations! You've won a $1000 gift card. Click here to claim."
+prediction = predict_fake_or_real(input_text)
+print("Prediction:", prediction)
+</code>
+      </pre>
+  </div>
+</section>
+
+
+
+<!-- Settings Modal -->
+<div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Choose Theme:</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="theme" id="defaultTheme" value="default" checked>
+          <label class="form-check-label" for="defaultTheme">
+            Default
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="theme" id="blackTheme" value="black">
+          <label class="form-check-label" for="blackTheme">
+            Black Theme
+          </label>
+        </div>
+        <hr>
+        <h5>Zoom:</h5>
+        <button type="button" class="btn btn-primary mr-2" id="zoomIn">Zoom In</button>
+        <button type="button" class="btn btn-primary" id="zoomOut">
+          <button type="button" class="btn btn-primary" id="zoomOut">Zoom Out</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="applyTheme">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Handle click on Settings link to open the modal
+    document.getElementById('settingsLink').addEventListener('click', function() {
+      $('#settingsModal').modal('show');
+    });
+  
+    // Function to apply theme based on selection or local storage
+    function applyTheme(theme) {
+      if (theme === 'black') {
+        document.body.classList.add('black-theme');
+      } else {
+        document.body.classList.remove('black-theme');
+      }
+    }
+  
+    // Handle theme apply button click
+    document.getElementById('applyTheme').addEventListener('click', function() {
+      // Get the selected theme value
+      var selectedTheme = document.querySelector('input[name="theme"]:checked').value;
+  
+      // Save the selected theme to local storage
+      localStorage.setItem('theme', selectedTheme);
+  
+      // Apply the selected theme
+      applyTheme(selectedTheme);
+  
+      // Close the modal
+      $('#settingsModal').modal('hide');
+    });
+  
+    // Apply the saved theme on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      var savedTheme = localStorage.getItem('theme') || 'default';
+      document.querySelector('input[name="theme"][value="' + savedTheme + '"]').checked = true;
+      applyTheme(savedTheme);
+    });
+  
+    // Handle zoom in button click
+    document.getElementById('zoomIn').addEventListener('click', function() {
+      document.body.style.zoom = "115%";
+    });
+  
+    // Handle zoom out button click
+    document.getElementById('zoomOut').addEventListener('click', function() {
+      document.body.style.zoom = "100%";
+    });
+  </script>
+  
+  <!--footer-->
+  <footer class="footer text-white" style="margin-top:60px;">
+      <div class="container" style="padding-top:20px;">
+          <div class="row">
+              <div class="col-md-3 col-sm-6">
+                  <h5>About Us</h5>
+                  <p>This is a final project. The web application utilizes an NLP machine learning model to detect fraudulent financial text-based scams.</p>
+              </div>
+        
+  </footer>
+  </body>
+  </html>
+  

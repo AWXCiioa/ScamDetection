@@ -105,7 +105,9 @@ Hard Voting Ensemble
 
 Soft Voting Ensemble
 
-Model Results
+## Model Results
+![Performance Table](static/Perfomance metrics.png)
+
 
 Cross-Validation Results
 The models were evaluated using Stratified K-Fold Cross-Validation to ensure consistent performance across different subsets of the data. Below are the mean accuracy and standard deviation for each model:
@@ -121,5 +123,8 @@ The models were evaluated using Stratified K-Fold Cross-Validation to ensure con
 | Random Forest              | [0.97376344, 0.9711828, 0.97806452, 0.97978495, 0.98064516]  | 0.9766881720430106     | 0.003633326809796602              |
 | Hard Voting Classifier     | [0.96989247, 0.96473118, 0.97204301, 0.96860215, 0.9716129]  | 0.9693763440860215     | 0.0026289388025696483             |
 | Soft Voting Classifier     | [0.97204301, 0.96602151, 0.97634409, 0.97376344, 0.97204301] | 0.9720430107526881     | 0.003397577231506474              |
+
+## Model Results
+![Cross Validation with Standard Deviation Result](static/ModelAccuracyComparison.png)
 
 The Soft Voting Classifier stands out as the best model, given its high mean accuracy and low standard deviation, indicating consistent and reliable performance.

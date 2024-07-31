@@ -92,25 +92,30 @@ Run unit tests using pytest:
 pytest tests/test_unit.py -v
 ```
 
-Models Used
+## Models Used
 The following models were used in the web application to detect scam text messages:
 
-Logistic Regression
+### Logistic Regression:
 
-Support Vector Machine (SVM)
+The logistic regression model has a good mean accuracy but slightly lower than the other models. The standard deviation indicates consistent performance across folds.
+### SVM:
 
-Random Forest
+The SVM model performs better than logistic regression, with a higher mean accuracy and similar consistency.
+### Random Forest:
 
-Hard Voting Ensemble
+The Random Forest model shows the highest mean accuracy among individual classifiers, indicating strong performance. The slightly higher standard deviation suggests more variability across the folds compared to SVM.
 
-Soft Voting Ensemble
+### Hard Voting Classifier:
+
+The hard voting classifier improves upon the individual classifiers' performances, but it's slightly lower than the soft voting classifier. The standard deviation is the lowest, indicating very consistent performance.
+
+### Soft Voting Classifier:
+
+The soft voting classifier shows a slight improvement over the hard voting classifier and most individual classifiers. The standard deviation is low, indicating consistent performance across folds.
 
 ## Model Results
-![Performance Table](static/Perfomance metrics.png)
+![Performance Table](static/Perfomancemetrics.png)
 
-
-Cross-Validation Results
-The models were evaluated using Stratified K-Fold Cross-Validation to ensure consistent performance across different subsets of the data. Below are the mean accuracy and standard deviation for each model:
 
 ## Cross-Validation Results
 
@@ -125,6 +130,9 @@ The models were evaluated using Stratified K-Fold Cross-Validation to ensure con
 | Soft Voting Classifier     | [0.97204301, 0.96602151, 0.97634409, 0.97376344, 0.97204301] | 0.9720430107526881     | 0.003397577231506474              |
 
 ## Model Results
-![Cross Validation with Standard Deviation Result](static/ModelAccuracyComparison.png)
+![Model accuracy comparison](static/ModelAccuracyComparison.png)
+![Cross Validation with Standard Deviation Result](static/Crossvalidationscore.png)
 
-The Soft Voting Classifier stands out as the best model, given its high mean accuracy and low standard deviation, indicating consistent and reliable performance.
+
+The **Logistic Regression** model showed high accuracy, with precision, recall, and an F1-score all at **0.96**. Nonetheless, it did misclassify certain smishing and spam messages, as detailed in the misclassified samples table in the appendix. Similarly, the **Support Vector Machine (SVM)** model performed robustly, matching Logistic Regression with precision, recall, and an F1-score of **0.96**. However, it also struggled with some smishing and spam messages. The **Random Forest** model outperformed the others, achieving a precision of **0.98**, recall of **0.97**, and an F1-score of **0.97**, resulting in fewer misclassifications. The ensemble models, including both hard and soft voting classifiers, showed even better results. Notably, the **soft voting classifier** achieved the highest accuracy and the most balanced performance metrics.
+
